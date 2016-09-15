@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ReactiveCocoa'
-  s.version = '4.2.3'
+  s.version = '4.2.2'
   s.summary = 'A framework for composing and transforming streams of values.'
   s.description = <<-EOS
     ReactiveCocoa (RAC) is an Objective-C framework for Functional Reactive Programming.
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
   s.source = {
-    :git => 'https://github.com/nghialv/ReactiveCocoa.git',
+    :git => 'https://github.com/Foild/ReactiveCocoa',
     :tag => 'v4.2.2'
   }
   s.dependency 'Result', '~> 3.0.0'
