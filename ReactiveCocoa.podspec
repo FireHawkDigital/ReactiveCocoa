@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
   s.source = {
-    :git => 'https://github.com/Foild/ReactiveCocoa',
+    :git => 'https://github.com/Foild/ReactiveCocoa.git',
     :tag => 'v4.2.2'
   }
   s.dependency 'Result', '~> 3.0.0'
@@ -22,10 +22,6 @@ Pod::Spec.new do |s|
   s.default_subspec = 'UI'
   s.prepare_command = "sed -i '' 's@<ReactiveCocoa/\\(.*\\)>@\"\\1\"@g' ReactiveCocoa/ReactiveCocoa.h"
 
-  s.subspec 'no-arc' do |ss|
-    ss.source_files = 'ReactiveCocoa/Objective-C/RACObjCRuntime.{h,m}'
-    ss.requires_arc = false
-  end
 
   s.subspec 'Core' do |ss|
     ss.source_files = 'ReactiveCocoa/**/*.{d,h,m,swift}'
@@ -39,32 +35,8 @@ Pod::Spec.new do |s|
       '**/*EXTRuntimeExtensions.h',
       '**/RACEmpty*.h'
     ]
-    ss.dependency 'ReactiveCocoa/no-arc'
 
     ss.watchos.exclude_files = '**/NSURLConnection*'
     ss.watchos.pod_target_xcconfig = {'GCC_PREPROCESSOR_DEFINITIONS' => 'DTRACE_PROBES_DISABLED=1'}
-  end
-
-  s.subspec 'UI' do |ss|
-    ss.dependency 'ReactiveCocoa/Core'
-
-    ss.ios.source_files = [
-      '**/ReactiveCocoa.h',
-      'ReactiveCocoa/**/*{UIActionSheet,UIAlertView,UIBarButtonItem,UIButton,UICollectionReusableView,UIControl,UIDatePicker,UIGestureRecognizer,UIImagePicker,UIRefreshControl,UISegmentedControl,UISlider,UIStepper,UISwitch,UITableViewCell,UITableViewHeaderFooterView,UIText,MK}*'
-    ]
-    ss.ios.framework = 'UIKit'
-
-    ss.osx.source_files = [
-      '**/ReactiveCocoa.h',
-      'ReactiveCocoa/**/*{AppKit,NSControl,NSText,NSTable}*'
-    ]
-    ss.osx.framework = 'AppKit'
-
-    ss.tvos.source_files = [
-      '**/ReactiveCocoa.h',
-      'ReactiveCocoa/**/*{UIButton,UICollectionReusableView,UIControl,UIGestureRecognizer,UISegmentedControl,UITableViewCell,UITableViewHeaderFooterView,UIText}*'
-    ]
-
-    ss.watchos.source_files = '**/ReactiveCocoa.h'
   end
 end
