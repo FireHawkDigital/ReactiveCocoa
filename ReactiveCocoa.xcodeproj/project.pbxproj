@@ -2968,6 +2968,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ReactiveCocoa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				SWIFT_VERSION = 2.3;
 				USER_HEADER_SEARCH_PATHS = ReactiveCocoa/extobjc;
 			};
 			name = Debug;
@@ -2981,6 +2982,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ReactiveCocoa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				SWIFT_VERSION = 2.3;
 				USER_HEADER_SEARCH_PATHS = ReactiveCocoa/extobjc;
 			};
 			name = Release;
@@ -3095,6 +3097,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ReactiveCocoa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				SWIFT_VERSION = 2.3;
 				USER_HEADER_SEARCH_PATHS = ReactiveCocoa/extobjc;
 			};
 			name = Profile;
@@ -3168,6 +3171,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ReactiveCocoa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				SWIFT_VERSION = 2.3;
 				USER_HEADER_SEARCH_PATHS = ReactiveCocoa/extobjc;
 			};
 			name = Test;

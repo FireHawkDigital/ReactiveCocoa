@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
   }
   s.dependency 'Result', '~> 3.0.0'
   s.framework = 'Foundation'
-  s.default_subspec = 'UI'
   s.prepare_command = "sed -i '' 's@<ReactiveCocoa/\\(.*\\)>@\"\\1\"@g' ReactiveCocoa/ReactiveCocoa.h"
 
 
